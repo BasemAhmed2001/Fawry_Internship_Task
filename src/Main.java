@@ -1,15 +1,52 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+
+        // Electric Car
+        System.out.println("------------------ Electric Car ------------------");
+
+        Car electricCar = CarFactory.createCar('e');
+
+        electricCar.accelerate();
+        electricCar.start();
+        for(int i = 0; i < 11; i++) {
+            electricCar.accelerate();
         }
+        electricCar.brake();
+        electricCar.stop();
+
+        // Gas Car
+        System.out.println("------------------ Gas Car ------------------");
+        Car gasCar = CarFactory.createCar('g');
+
+        gasCar.accelerate();
+        gasCar.start();
+        for(int i = 0; i < 11; i++) {
+            gasCar.accelerate();
+        }
+        gasCar.brake();
+        gasCar.stop();
+        CarFactory.replaceEngine(gasCar, 'e');
+        gasCar.accelerate();
+        gasCar.start();
+        gasCar.accelerate();
+
+
+        // Hybrid Car
+        System.out.println("------------------ Hybrid Car ------------------");
+        Car hybridCar = CarFactory.createCar('h');
+
+        hybridCar.accelerate();
+        hybridCar.start();
+        for(int i = 0; i < 11; i++) {
+            hybridCar.accelerate();
+        }
+        hybridCar.brake();
+        hybridCar.stop();
+
+
+
+
     }
 }

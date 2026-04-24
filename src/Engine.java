@@ -1,4 +1,16 @@
-package PACKAGE_NAME;
 
-public class Engine {
+
+
+
+
+
+public interface Engine {
+
+    void increase();
+    void decrease();
+    int getSpeed();
+
+
+
+
 }
